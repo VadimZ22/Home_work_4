@@ -2,12 +2,15 @@
 Console.Clear();
 Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
-Console.Write("Введите степень числа: ");
+Console.Write("Введите степень числа (натуральное число): ");
 int exponent = int.Parse(Console.ReadLine()!);
-
-int result = Power(number, exponent);
-Console.WriteLine(result);
-
+if (exponent < 0)
+    Console.WriteLine("Число должно быть натуральным!");
+else
+{
+    int result = Power(number, exponent);
+    Console.WriteLine(result);
+}
 
 
 
